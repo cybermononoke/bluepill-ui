@@ -37,10 +37,22 @@ export const AVOButton = styled(Button, {
         borderColor: '$color12',
         color: '$text',
         pressStyle: {
-          bg: '$color2',
+          bg: 'transparent',
           borderColor: '$color1',
         },
       },
+
+       secondaryoutline: {
+        bg: 'transparent',
+        borderWidth: 1,
+        borderColor: '$avoblue',
+        color: '$avoblue',
+        pressStyle: {
+          bg: 'transparent',
+          borderColor: '$color1',
+        },
+      },
+      
     },
 
     size: {
