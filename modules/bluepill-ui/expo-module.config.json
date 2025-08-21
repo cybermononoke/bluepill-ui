@@ -1,0 +1,9 @@
+{
+  "platforms": ["apple", "android", "web"],
+  "apple": {
+    "modules": ["BluepillUiModule"]
+  },
+  "android": {
+    "modules": ["expo.modules.bluepillui.BluepillUiModule"]
+  }
+}
