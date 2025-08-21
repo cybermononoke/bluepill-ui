@@ -1,21 +1,23 @@
+// src/AVOButton.tsx
+import React, { useEffect, useState } from 'react'
 import { Button, styled } from 'tamagui'
+import { loadMontserratFont, getMontserratFontFamily } from './fonts/loadMontserrat'
 
-export const AVOButton = styled(Button, {
+const StyledButton = styled(Button, {
   name: 'AVOButton',
-  circular: true, 
-  fontFamily: '$body',
+  circular: true,
   fontWeight: '$5',
   cursor: 'pointer',
 
   variants: {
     variant: {
       primary: {
-        bg: '$avoblue',     
+        bg: '$avoblue',
         color: 'white',
         borderWidth: 1,
         borderColor: '$avoblue',
         pressStyle: {
-          bg: '$avobluepress',     
+          bg: '$avobluepress',
           borderColor: '$avobluepress',
         },
       },
@@ -42,7 +44,7 @@ export const AVOButton = styled(Button, {
         },
       },
 
-       secondaryoutline: {
+      secondaryoutline: {
         bg: 'transparent',
         borderWidth: 1,
         borderColor: '$avoblue',
@@ -52,7 +54,6 @@ export const AVOButton = styled(Button, {
           borderColor: '$color1',
         },
       },
-      
     },
 
     size: {
@@ -79,3 +80,35 @@ export const AVOButton = styled(Button, {
     size: 'medium',
   },
 })
+
+interface AVOButtonProps {
+  variant?: 'primary' | 'secondary' | 'outline' | 'secondaryoutline'
+  size?: 'small' | 'medium' | 'large'
+  children?: React.ReactNode
+  fontWeight?: 400 | 500 | 600 | 700
+  [key: string]: any
+}
+
+export const AVOButton: React.FC<AVOButtonProps> = ({ 
+  fontWeight = 500, 
+  ...props 
+}) => {
+  const [fontLoaded, setFontLoaded] = useState(false)
+
+  useEffect(() => {
+    const initFont = async () => {
+      await loadMontserratFont()
+      setFontLoaded(true)
+    }
+    initFont()
+  }, [])
+
+  const fontFamily = fontLoaded ? getMontserratFontFamily(fontWeight) : '$body'
+
+  return (
+    <StyledButton
+      {...props}
+      fontFamily={fontFamily}
+    />
+  )
+}

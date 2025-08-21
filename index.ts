@@ -1,1 +1,1 @@
-export { AVOButton } from './src/AVOButton';
+export { AVOButton } from './src/AVOButton'
