@@ -1,3 +1,3 @@
-export { AVOButton } from './src/AVOButton'
-export * from './src/config'
-export { BluepillProvider } from './src/provider/BluepillProvider'
+// export { AVOButton } from './src/AVOButton'
+// export * from './src/config'
+// export { BluepillProvider } from './src/provider/BluepillProvider'

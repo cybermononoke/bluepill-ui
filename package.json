@@ -1,18 +1,33 @@
 {
   "name": "bluepill-ui",
   "version": "1.0.0",
-  "description": "Pill buttons for AVO UI",
-  "license": "ISC",
-  "author": "cybermononoke",
-  "type": "commonjs",
-  "main": "index.ts",
+  "description": "A Tamagui UI library with scoped configuration",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "expo-module build",
+    "clean": "expo-module clean",
+    "lint": "expo-module lint",
+    "test": "expo-module test",
+    "prepare": "expo-module prepare",
+    "prepublishOnly": "expo-module prepublishOnly",
+    "expo-module": "expo-module"
   },
-
+  "keywords": [
+    "react-native",
+    "expo",
+    "tamagui",
+    "ui"
+  ],
+  "repository": "https://github.com/cybermononoke/bluepill-ui",
+  "bugs": {
+    "url": "https://github.com/cybermononoke/bluepill-ui/issues"
+  },
+  "author": "cybermononoke",
+  "license": "MIT",
+  "homepage": "https://github.com/cybermononoke/bluepill-ui#readme",
   "dependencies": {
     "tamagui": "1.132.15",
-
     "@tamagui/animations-react-native": "^1.132.18",
     "@tamagui/colors": "1.132.15",
     "@tamagui/config": "1.132.15",
@@ -21,6 +36,20 @@
     "@tamagui/shorthands": "^1.132.15",
     "@tamagui/theme-builder": "1.132.15",
     "@tamagui/toast": "1.132.15"
-
+  },
+  "peerDependencies": {
+    "expo": "*",
+    "expo-font": "*",
+    "react": "*",
+    "react-native": "*"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-native": "^0.72.0",
+    "expo-module-scripts": "^3.5.2"
+  },
+  "expo": {
+    "name": "bluepill-ui",
+    "slug": "bluepill-ui"
   }
 }
