@@ -12,5 +12,5 @@
     "allowJs": true,
     "declaration": true
   },
-  "include": ["src/**/*", "index.ts", "tamagui.config.ts", "tamagui.themes.ts", "src/Button.tsx"]
+  "include": ["src/**/*", "index.ts", "tamagui.config.ts", "tamagui.themes.ts", "src/components/Button.tsx"]
 }

@@ -1,56 +1,39 @@
 {
-  "name": "bluepill-ui",
-  "version": "1.0.0",
-  "description": "A Tamagui UI library with scoped configuration",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "scripts": {
- "build": "tsc && npm run copy-assets",
-    "copy-assets": "cp -r src/components/assets dist/src/components/ || xcopy src\\components\\assets dist\\src\\components\\assets\\ /E /I",
-    "clean": "expo-module clean",
-    "lint": "expo-module lint",
-    "test": "expo-module test",
-    "prepare": "expo-module prepare",
-    "prepublishOnly": "expo-module prepublishOnly",
-    "expo-module": "expo-module"
-  },
-  "keywords": [
-    "react-native",
-    "expo",
-    "tamagui",
-    "ui"
+  "name": "@cybermononoke/bluepill-ui",
+  "version": "0.0.0",
+  "private": false,
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist",
+    ".tamagui"
   ],
-  "repository": "https://github.com/cybermononoke/bluepill-ui",
-  "bugs": {
-    "url": "https://github.com/cybermononoke/bluepill-ui/issues"
+  "scripts": {
+    "clean": "rimraf dist .tamagui",
+    "build:types": "tsc -p tsconfig.build.json",
+    "build:tamagui": "tamagui build",
+    "build:bundle": "rollup -c",
+    "build": "npm run clean && npm run build:tamagui && npm run build:types && npm run build:bundle",
+    "prepare": "npm run build"
   },
-  "author": "cybermononoke",
-  "license": "MIT",
-  "homepage": "https://github.com/cybermononoke/bluepill-ui#readme",
   "dependencies": {
+    "tamagui": "1.132.15",         
+    "@tamagui/config": "1.132.15",
+    "@tamagui/theme-builder": "1.132.15",
+    "@tamagui/colors": "1.132.15"
   },
-"peerDependencies": {
-  "expo": "*",
-  "expo-font": "*",
-  "react": "*",
-  "react-native": "*",
-  "tamagui": "1.132.15",
-  "@tamagui/core": "1.132.15",
-  "@tamagui/colors": "1.132.15",
-  "@tamagui/config": "1.132.15",
-  "@tamagui/animations-react-native": "1.132.18",
-  "@tamagui/lucide-icons": "1.132.15",
-  "@tamagui/shorthands": "1.132.15",
-  "@tamagui/theme-builder": "1.132.15",
-  "@tamagui/toast": "1.132.15"
-},
+  "peerDependencies": {
+    "react": ">=18",
+    "react-native": ">=0.69"
+  },
   "devDependencies": {
-    "@types/react": "^18.0.0",
-    "@types/react-native": "^0.72.0",
-    "expo-module-scripts": "^3.5.2"
-  },
-  "expo": {
-    "name": "bluepill-ui",
-    "slug": "bluepill-ui"
+    "@tamagui/cli": "1.132.15",
+    "typescript": "^5.0.0",
+    "rollup": "^3.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "rimraf": "^3.0.2"
   }
 }

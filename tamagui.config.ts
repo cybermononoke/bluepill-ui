@@ -111,6 +111,7 @@ export const bluepillConfig = createTamagui({
 
 // export default config
 export type BluepillConfig = typeof bluepillConfig
+export default BluepillConfig
 
 // export type Conf = typeof config
 
