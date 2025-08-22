@@ -7,9 +7,8 @@ import { avoConfig } from '../config' // <- re-exported config index (see below)
 
 // local require() so fonts are bundled with the package
 const fontMap = {
-  Montserrat: require('../assets/fonts/Montserrat.ttf'),
+  Montserrat: require('../assets/fonts/Montserrat-Regular.ttf'),
   MontserratBold: require('../assets/fonts/Montserrat-Bold.ttf'),
-  SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'), // if used
 }
 
 export const BluepillProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {

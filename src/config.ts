@@ -1,7 +1,6 @@
-// src/config.ts
 import { defaultConfig } from '@tamagui/config/v4'
 import { createTamagui } from 'tamagui'
-import { themes } from './tamagui.themes'
+import { themes } from './config/tamagui.themes'
 
 export const avoConfig = createTamagui({
   ...defaultConfig,
@@ -9,7 +8,7 @@ export const avoConfig = createTamagui({
     ...defaultConfig.themes,
     ...themes,
   },
-  name: 'avo-ui', // 👈 important: unique config name
+  name: 'avo-ui', 
 })
 
 export type AvoConfig = typeof avoConfig
