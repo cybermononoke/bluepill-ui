@@ -1,39 +1,26 @@
 {
-  "name": "@cybermononoke/bluepill-ui",
-  "version": "0.0.0",
-  "private": false,
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/types/index.d.ts",
-  "files": [
-    "dist",
-    ".tamagui"
-  ],
+  "name": "bluepill-ui",
+  "version": "1.0.0",
+  "description": "Pill buttons for AVO UI",
+  "license": "ISC",
+  "author": "cybermononoke",
+  "type": "commonjs",
+  "main": "index.ts",
   "scripts": {
-    "clean": "rimraf dist .tamagui",
-    "build:types": "tsc -p tsconfig.build.json",
-    "build:tamagui": "tamagui build",
-    "build:bundle": "rollup -c",
-    "build": "npm run clean && npm run build:tamagui && npm run build:types && npm run build:bundle",
-    "prepare": "npm run build"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+
   "dependencies": {
-    "tamagui": "1.132.15",         
+    "tamagui": "1.132.15",
+
+    "@tamagui/animations-react-native": "^1.132.18",
+    "@tamagui/colors": "1.132.15",
     "@tamagui/config": "1.132.15",
+    "@tamagui/core": "^1.132.15",
+    "@tamagui/lucide-icons": "1.132.15",
+    "@tamagui/shorthands": "^1.132.15",
     "@tamagui/theme-builder": "1.132.15",
-    "@tamagui/colors": "1.132.15"
-  },
-  "peerDependencies": {
-    "react": ">=18",
-    "react-native": ">=0.69"
-  },
-  "devDependencies": {
-    "@tamagui/cli": "1.132.15",
-    "typescript": "^5.0.0",
-    "rollup": "^3.0.0",
-    "@rollup/plugin-node-resolve": "^15.0.0",
-    "@rollup/plugin-commonjs": "^25.0.0",
-    "@rollup/plugin-typescript": "^11.0.0",
-    "rimraf": "^3.0.2"
+    "@tamagui/toast": "1.132.15"
+
   }
 }

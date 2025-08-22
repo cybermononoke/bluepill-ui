@@ -1,8 +1,8 @@
-import { Button, styled, TamaguiComponent } from 'tamagui'
+import { Button, styled } from 'tamagui'
 
-export const AVOButton: ReturnType<typeof styled> = styled(Button, {
+export const AVOButton = styled(Button, {
   name: 'AVOButton',
-  circular: true,
+  circular: true, 
   fontFamily: '$body',
   fontWeight: '$5',
   cursor: 'pointer',
@@ -10,15 +10,16 @@ export const AVOButton: ReturnType<typeof styled> = styled(Button, {
   variants: {
     variant: {
       primary: {
-        bg: '$avoblue',
+        bg: '$avoblue',     
         color: 'white',
         borderWidth: 1,
         borderColor: '$avoblue',
         pressStyle: {
-          bg: '$avobluepress',
+          bg: '$avobluepress',     
           borderColor: '$avobluepress',
         },
       },
+
       secondary: {
         bg: '$color12',
         borderWidth: 1,
@@ -29,6 +30,7 @@ export const AVOButton: ReturnType<typeof styled> = styled(Button, {
           borderColor: '$color4',
         },
       },
+
       outline: {
         bg: 'transparent',
         borderWidth: 1,
@@ -39,7 +41,8 @@ export const AVOButton: ReturnType<typeof styled> = styled(Button, {
           borderColor: '$color1',
         },
       },
-      secondaryoutline: {
+
+       secondaryoutline: {
         bg: 'transparent',
         borderWidth: 1,
         borderColor: '$avoblue',
@@ -49,6 +52,7 @@ export const AVOButton: ReturnType<typeof styled> = styled(Button, {
           borderColor: '$color1',
         },
       },
+      
     },
 
     size: {
