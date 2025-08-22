@@ -2,10 +2,11 @@
   "name": "bluepill-ui",
   "version": "1.0.0",
   "description": "A Tamagui UI library with scoped configuration",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "expo-module build",
+ "build": "tsc && npm run copy-assets",
+    "copy-assets": "cp -r src/components/assets dist/src/components/ || xcopy src\\components\\assets dist\\src\\components\\assets\\ /E /I",
     "clean": "expo-module clean",
     "lint": "expo-module lint",
     "test": "expo-module test",
@@ -27,22 +28,22 @@
   "license": "MIT",
   "homepage": "https://github.com/cybermononoke/bluepill-ui#readme",
   "dependencies": {
-    "tamagui": "1.132.15",
-    "@tamagui/animations-react-native": "^1.132.18",
-    "@tamagui/colors": "1.132.15",
-    "@tamagui/config": "1.132.15",
-    "@tamagui/core": "^1.132.15",
-    "@tamagui/lucide-icons": "1.132.15",
-    "@tamagui/shorthands": "^1.132.15",
-    "@tamagui/theme-builder": "1.132.15",
-    "@tamagui/toast": "1.132.15"
   },
-  "peerDependencies": {
-    "expo": "*",
-    "expo-font": "*",
-    "react": "*",
-    "react-native": "*"
-  },
+"peerDependencies": {
+  "expo": "*",
+  "expo-font": "*",
+  "react": "*",
+  "react-native": "*",
+  "tamagui": "1.132.15",
+  "@tamagui/core": "1.132.15",
+  "@tamagui/colors": "1.132.15",
+  "@tamagui/config": "1.132.15",
+  "@tamagui/animations-react-native": "1.132.18",
+  "@tamagui/lucide-icons": "1.132.15",
+  "@tamagui/shorthands": "1.132.15",
+  "@tamagui/theme-builder": "1.132.15",
+  "@tamagui/toast": "1.132.15"
+},
   "devDependencies": {
     "@types/react": "^18.0.0",
     "@types/react-native": "^0.72.0",

@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react'
-import { TamaguiProvider } from 'tamagui'
 import * as Font from 'expo-font'
-import { View, ActivityIndicator } from 'react-native'
+import React, { useEffect, useState } from 'react'
+import { ActivityIndicator, View } from 'react-native'
+import { TamaguiProvider } from 'tamagui'
 import { bluepillConfig } from '../config'
 
 // Bundle fonts with the module
 const fontMap = {
-  Montserrat: require('../assets/fonts/Montserrat-Regular.ttf'),
-  MontserratBold: require('../assets/fonts/Montserrat-Bold.ttf'),
+  Montserrat: require('../components/assets/fonts/Montserrat-Regular.ttf'),
+  MontserratBold: require('../components/assets/fonts/Montserrat-Bold.ttf'),
 }
 
 interface BluepillProviderProps {
