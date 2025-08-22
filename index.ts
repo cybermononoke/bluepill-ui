@@ -1,3 +1,4 @@
-// export { AVOButton } from './src/AVOButton'
-// export * from './src/config'
-// export { BluepillProvider } from './src/provider/BluepillProvider'
+export { BluepillProvider } from './src/providers/BluepillProvider'
+export { AVOButton } from './src/components/Button'
+export { bluepillConfig, type BluepillConfig } from './src/config/tamagui.config'
+export { themes } from './src/config/tamagui.themes'
