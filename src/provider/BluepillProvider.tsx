@@ -10,8 +10,7 @@ export function BluepillProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     async function loadFonts() {
       await Font.loadAsync({
-        Inter: require('../assets/fonts/Inter-Regular.ttf'),
-        // load other fonts
+        // load fonts here
       })
       setReady(true)
     }
