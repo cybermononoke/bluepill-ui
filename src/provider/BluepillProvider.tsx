@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { TamaguiProvider } from 'tamagui'
 import * as Font from 'expo-font'
 import { View, ActivityIndicator } from 'react-native'
-import { tamaguiConfig } from '../config/tamagui.config'
+import { config } from '../config/tamagui.config'
 
 export function BluepillProvider({ children }: { children: React.ReactNode }) {
   const [ready, setReady] = useState(false)
@@ -26,5 +26,5 @@ export function BluepillProvider({ children }: { children: React.ReactNode }) {
     )
   }
 
-  return <TamaguiProvider config={tamaguiConfig}>{children}</TamaguiProvider>
+  return <TamaguiProvider config={ config }>{children}</TamaguiProvider>
 }

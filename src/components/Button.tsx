@@ -1,6 +1,13 @@
-import { Button, styled } from 'tamagui'
+import { Button, styled, GetProps } from 'tamagui'
+import type { ComponentType } from 'react'
 
-export const AVOButton = styled(Button, {
+// define component type
+type AVOButtonProps = GetProps<typeof Button> & {
+  variant?: 'primary' | 'secondary' | 'outline' | 'secondaryoutline'
+  size?: 'small' | 'medium' | 'large'
+}
+
+export const AVOButton: ComponentType<AVOButtonProps> = styled(Button, {
   name: 'AVOButton',
   circular: true, 
   fontFamily: '$body',

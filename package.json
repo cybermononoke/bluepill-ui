@@ -15,7 +15,6 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
-    "tamagui": "1.132.15",
     "@tamagui/animations-react-native": "^1.132.18",
     "@tamagui/colors": "1.132.15",
     "@tamagui/config": "1.132.15",
@@ -24,11 +23,16 @@
     "@tamagui/shorthands": "^1.132.15",
     "@tamagui/theme-builder": "1.132.15",
     "@tamagui/toast": "1.132.15",
-    "expo-font": "^11.10.3"
+    "expo-font": "^11.10.3",
+    "tamagui": "1.132.15"
   },
   "peerDependencies": {
+    "expo": ">=50.0.0",
     "react": ">=18.0.0",
-    "react-native": ">=0.72.0",
-    "expo": ">=50.0.0"
+    "react-native": ">=0.72.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.11",
+    "@types/react-native": "^0.72.8"
   }
 }
